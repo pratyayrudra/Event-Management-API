@@ -16,7 +16,7 @@ app.use('/event', Event);
 app.use('/user', User);
 app.use('/attend', Attend);
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Server started listening at ${PORT}`)
