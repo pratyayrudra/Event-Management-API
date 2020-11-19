@@ -1,11 +1,6 @@
 const mysql = require('mysql');
 
-var mysqlConnection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'abcd1234',
-    database: 'event-management-api'
-});
+var mysqlConnection = mysql.createConnection(process.env.DATABASE_URL);
 
 mysqlConnection.connect((err) => {
     if (!err) {
